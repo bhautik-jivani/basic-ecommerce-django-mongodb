@@ -1,0 +1,73 @@
+version: "2"
+checks:
+  complex-logic:
+    config:
+      threshold: 10
+  method-complexity:
+    config:
+      threshold: 10
+  nested-control-flow:
+    config:
+      threshold: 4
+  return-statements:
+    config:
+      threshold: 4
+  argument-count:
+    config:
+      threshold: 4
+  file-lines:
+    config:
+      threshold: 500
+  method-count:
+    config:
+      threshold: 20
+  method-lines:
+    config:
+      threshold: 25
+  similar-code:
+    config:
+      threshold: 32
+  identical-code:
+    config:
+      threshold: 32
+
+plugins:
+  pep8:
+    enabled: true
+  pylint:
+    enabled: true
+    plugins:
+      - django
+    django_settings_module: mymodule.settings
+  duplication:
+    enabled: true
+    config:
+      languages:
+        python:
+          python_version: 3
+  bandit:
+    enabled: true
+  sonar-python:
+    enabled: true
+  radon:
+    enabled: true
+    config:
+      threshold: "C"
+
+exclude_patterns:
+  - "config/"
+  - "db/"
+  - "dist/"
+  - "features/"
+  - "**/node_modules/"
+  - "script/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "Tests/"
+  - "**/vendor/"
+  - "**/*_test.go"
+  - "**/*.d.ts"
+  - "**/.pytest_cache/"
+  - "**/urls.py"
+  - "**/django_forest.egg-info/"

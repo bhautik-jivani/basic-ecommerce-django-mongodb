@@ -1,0 +1,50 @@
+version: "3"
+services: 
+  web: 
+    build:
+      context: ./ecomm_project
+      dockerfile: Dockerfile
+    container_name: ecomm_backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./ecomm_project:/backend  # Mounts the entire Django project directory into /backend in the container
+      - static_volume:/backend/static  # Mounts a volume for Django static files
+      - media_volume:/backend/media  # Mounts a volume for Django media files
+    ports: 
+      - "80:8000"
+    env_file:
+      - ./.env.local
+    networks:
+      - ecomm_network
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    container_name: ecomm_db
+    ports:
+      - "27017:27017"
+    env_file:
+      - ./.env.local
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - ecomm_network
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+networks:
+  ecomm_network:
+    name: ecomm_network
+    driver: bridge
+
+volumes:
+  mongo_data:  # Defines the volume for MongoDB data persistence
+    name: ecomm_db
+  static_volume:  # Defines the volume for Django static files
+    name: ecomm_static
+  media_volume:  # Defines the volume for Django media files
+    name: ecomm_media

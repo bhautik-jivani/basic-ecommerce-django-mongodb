@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "6e6c7532-f282-4a69-a8cf-fce2ee508797",
+		"name": "Aubergine Ecommerce Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10284266"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "List Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/roles/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Seller\",\r\n    \"permissions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/role/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/role/66a4f45b9e8e08fadecff705/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"role",
+								"66a4f45b9e8e08fadecff705",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Seller\",\r\n    \"permissions\": [\"66a4f2ffcb95ab0077083c09\", \"66a4f2ffcb95ab0077083c0b\", \"66a4f2ffcb95ab0077083c0d\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/role/66a4f45b9e8e08fadecff705/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"role",
+								"66a4f45b9e8e08fadecff705",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permissions",
+			"item": [
+				{
+					"name": "List Permissions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/permissions/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"permissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"dealer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/permission/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/permission/66a4a78a705494c474eb04a8/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"permission",
+								"66a4a78a705494c474eb04a8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"view_role\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/permission/66a4a78a705494c474eb04a8/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"permission",
+								"66a4a78a705494c474eb04a8",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/user-profiles/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"user-profiles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/user-profile/66a7540dc1033c0c8afc0bbf/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"user-profile",
+								"66a7540dc1033c0c8afc0bbf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bhautik Jivani\",\r\n    \"bio\": \"Test Bhautik Bio\",\r\n    \"contact_number\": \"9898989898\",\r\n    \"user_type\": \"3\",\r\n    \"roles\": [\"66a75396c355d9fec8c12255\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/user-profile/66a7540dc1033c0c8afc0bbf/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"user-profile",
+								"66a7540dc1033c0c8afc0bbf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/profile/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bhautik Jivani\",\r\n    \"bio\": \"Test Details\",\r\n    \"contact_number\": \"9898989899\",\r\n    \"roles\": [\"66a4a789705494c474eb04a6\", \"66a4a78a705494c474eb04b8\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/profile/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seller Panel",
+			"item": [
+				{
+					"name": "List Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/seller/products/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"seller",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Smart Watch 3",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Smart Watch 3 with White Belt",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "/C:/Users/Bhautik/Downloads/watch-product.jpg"
+								},
+								{
+									"key": "product_amount",
+									"value": "1600",
+									"type": "text"
+								},
+								{
+									"key": "product_status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_quantity",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{projecturl}}/seller/products/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"seller",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/seller/products/66a728b85717cf8c07cfe5a5/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"seller",
+								"products",
+								"66a728b85717cf8c07cfe5a5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Smart Watch 1",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Smart Watch 1 with White Belt",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "/C:/Users/Bhautik/Downloads/watch-product.jpg"
+								},
+								{
+									"key": "product_amount",
+									"value": "1400",
+									"type": "text"
+								},
+								{
+									"key": "product_status",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{projecturl}}/seller/products/66a728b85717cf8c07cfe5a5/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"seller",
+								"products",
+								"66a728b85717cf8c07cfe5a5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_name",
+									"value": "Smart Watch 1",
+									"type": "text"
+								},
+								{
+									"key": "product_description",
+									"value": "Smart Watch 1 with White Belt",
+									"type": "text"
+								},
+								{
+									"key": "product_img",
+									"type": "file",
+									"src": "/C:/Users/Bhautik/Downloads/watch-product.jpg",
+									"disabled": true
+								},
+								{
+									"key": "product_amount",
+									"value": "1400",
+									"type": "text"
+								},
+								{
+									"key": "product_status",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{projecturl}}/seller/products/66a3539b0848c2b9217fb02b/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"seller",
+								"products",
+								"66a3539b0848c2b9217fb02b",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buyer",
+			"item": [
+				{
+					"name": "List Published Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/products/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Published Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/products/66a753ecc1033c0c8afc0bbd/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"products",
+								"66a753ecc1033c0c8afc0bbd",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projecturl}}/cart/",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product\": \"66a755f81cb154f1933a8a9e\",\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"product\": \"66a753ecc1033c0c8afc0bbd\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/cart/add",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product\": \"66a755f81cb154f1933a8a9e\",\r\n            \"quantity\": 10\r\n        },\r\n        {\r\n            \"product\": \"66a753ecc1033c0c8afc0bbd\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projecturl}}/cart/update",
+							"host": [
+								"{{projecturl}}"
+							],
+							"path": [
+								"cart",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"admin@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{projecturl}}/login/",
+					"host": [
+						"{{projecturl}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bhautik Jivani\",\r\n    \"email\": \"bhautik@gmail.com\",\r\n    \"password\": \"admin@1\",\r\n    \"contact_number\": \"9898989898\",\r\n    \"user_type\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{projecturl}}/register/",
+					"host": [
+						"{{projecturl}}"
+					],
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
