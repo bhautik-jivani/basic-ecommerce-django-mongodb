@@ -2,7 +2,7 @@
 
 ## Objective
 
-Using the DRF (Django Rest Framework), create scalable and reliable backend REST APIs for a blog platform that can support a wide range of users with different access levels.
+Using the DRF (Django Rest Framework), MongoDB (MongoEngine) and Docker, created scalable and reliable backend REST APIs for a ecmmerce platform that can support a wide range of users with different access levels.
 
 ## Installation
 
